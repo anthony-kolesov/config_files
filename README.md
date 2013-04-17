@@ -1,4 +1,11 @@
-config_files
-============
+Usefull configration files
+==========================
 
-Common configurations. For example for bash and vim
+Place your machine specific commands to `bashrc.machine`.
+
+## Setup
+```
+$ ln -s <this_dir>/bashrc ~/.bashrc
+$ ln -s <this_dir>/vimrc ~/.vimrc
+```
+
