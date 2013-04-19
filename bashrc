@@ -5,7 +5,7 @@ export PS1='[\u@\h \W]\$ '
 set -b
 
 # Import anything specific to this machine.
-if [ -f "~/bashrc.machine" ]; then
-    source "~/bashrc.machine"
+if [ -f ~/bashrc.machine ]; then
+    source ~/bashrc.machine
 fi
 
