@@ -14,10 +14,7 @@ filetype indent on
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set expandtab
-
-" Show ruler with line and column numbers.
-set ruler
+"set expandtab
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -35,4 +32,15 @@ endif
 " Don't wake up system with blinking cursor:
 " http://www.linuxpowertop.org/known.php
 let &guicursor = &guicursor . ",a:blinkon0"
+
+" Show ruler with line and column numbers.
+set ruler
+
+"if &syntax=="gitcommit"
+"	setlocal textwidth=76
+"endif
+
+highlight SpellBad ctermfg=red ctermbg=white
+set spelllang=en_us
+"set spell spelllang=en_us
 
