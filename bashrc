@@ -5,6 +5,8 @@ export PS1='[\u@\h \W]\$ '
 set -b
 
 alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias fgrep='fgrep --color=auto'
 
 # Use user-friendly ll alias
 alias ll='ls -lv'
