@@ -11,9 +11,11 @@ filetype plugin on
 filetype indent on
 
 " Configure tabs
-set tabstop=4
-set softtabstop=4
+" Use 8 for real tabs, use 4 for space-tabs
+set tabstop=8
+set softtabstop=0
 set shiftwidth=4
+set ai
 "set expandtab
 
 " Switch syntax highlighting on, when the terminal has colors
@@ -43,4 +45,9 @@ set ruler
 highlight SpellBad ctermfg=red ctermbg=white
 set spelllang=en_us
 "set spell spelllang=en_us
+
+" Show trailing whitepace and spaces before a tab:
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+:autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
