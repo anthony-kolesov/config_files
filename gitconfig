@@ -1,5 +1,6 @@
 [user]
 	name = Anton Kolesov
+	email = Anton.Kolesov@synopsys.com
 [alias]
 	br = branch
 	ci = commit
