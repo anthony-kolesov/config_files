@@ -1,12 +1,13 @@
 [user]
 	name = Anton Kolesov
-	email = anton.kolesov@synopsys.com
 [alias]
 	br = branch
 	ci = commit
 	co = checkout
 	cp = cherry-pick
-	log-summary = log --date=short --pretty='format:%C(yellow)%h%Creset%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset'
+        cp-c = cherry-pick --continue
+        cp-a = cherry-pick --abort
+	log-summary = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
 	st = status
 [format]
 	signoff = false

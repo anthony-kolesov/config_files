@@ -13,10 +13,10 @@ filetype indent on
 " Configure tabs
 " Use 8 for real tabs, use 4 for space-tabs
 set tabstop=8
-set softtabstop=0
+set softtabstop=4
 set shiftwidth=4
 set ai
-"set expandtab
+set noexpandtab
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
