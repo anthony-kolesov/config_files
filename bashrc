@@ -9,7 +9,7 @@ alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
 # Use user-friendly ll alias
-alias ll='ls -lv'
+alias ll='ls -lhv'
 
 # Import anything specific to this machine.
 if [ -f ~/bashrc.machine ]; then
