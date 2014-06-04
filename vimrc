@@ -51,3 +51,8 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
+" Default colorscheme is awful for diffs, because sometimes fg == bg.
+if &diff
+    colorscheme desert
+endif
+
