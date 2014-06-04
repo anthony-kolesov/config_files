@@ -1,20 +1,22 @@
 [user]
-	name = Anton Kolesov
-	email = Anton.Kolesov@synopsys.com
+    name = Anton Kolesov
+    email = Anton.Kolesov@synopsys.com
 [alias]
-	br = branch
-	ci = commit
-	co = checkout
-	cp = cherry-pick
-        cp-c = cherry-pick --continue
-        cp-a = cherry-pick --abort
-	log-summary = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
-	st = status
+    br = branch
+    ci = commit
+    co = checkout
+    cp = cherry-pick
+    cp-c = cherry-pick --continue
+    cp-a = cherry-pick --abort
+    rb-c = rebase --continue
+    log-summary = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
+    st = status
 [format]
-	signoff = false
+    signoff = false
 [core]
-	editor=vim
+    editor=vim
 [sendemail]
-	smtpserver = mailhost
+    smtpserver = mailhost
+    confirm = auto
 [push]
-	default = simple
+    default = simple
