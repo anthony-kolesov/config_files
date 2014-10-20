@@ -9,12 +9,16 @@
     cp-c = cherry-pick --continue
     cp-a = cherry-pick --abort
     rb-c = rebase --continue
+    rb-s = rebase --skip
     log-summary = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
     st = status
+    lg = log --oneline -n9
 [format]
     signoff = false
 [core]
     editor=vim
+[color]
+    branch=true
 [sendemail]
     smtpserver = mailhost
     confirm = auto
