@@ -11,6 +11,7 @@
     rb-c = rebase --continue
     rb-s = rebase --skip
     log-summary = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
+    lgs = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d' -n9
     st = status
     lg = log --oneline -n9
 [format]
