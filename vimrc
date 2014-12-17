@@ -25,6 +25,14 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
+" Search
+set incsearch
+
+" Disable backup files
+set nobackup nowb noswapfile
+
+set viminfo^=%
+
 if &term=="xterm"
     set t_Co=8
     set t_Sb=^[[4%dm
@@ -38,9 +46,11 @@ let &guicursor = &guicursor . ",a:blinkon0"
 " Show ruler with line and column numbers.
 set ruler
 
-"if &syntax=="gitcommit"
-"	setlocal textwidth=76
-"endif
+" Vim thinks that 
+au BufRead,BufNewFile *.md set filetype=text
+if &filetype == 'text'
+	setlocal textwidth=78
+endi
 
 highlight SpellBad ctermfg=red ctermbg=white
 set spelllang=en_us
@@ -50,6 +60,9 @@ set spelllang=en_us
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 :autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+
+" Remember last position
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
 " Default colorscheme is awful for diffs, because sometimes fg == bg.
 if &diff
