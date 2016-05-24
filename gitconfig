@@ -3,17 +3,24 @@
     email = Anton.Kolesov@synopsys.com
 [alias]
     br = branch
-    ci = commit
+    ci = commit -s
+    cia = commit --amend
+    ciaa = commit --amend -a
     co = checkout
     cp = cherry-pick
-    cp-c = cherry-pick --continue
-    cp-a = cherry-pick --abort
-    rb-c = rebase --continue
-    rb-s = rebase --skip
+    cpc = cherry-pick --continue
+    cpa = cherry-pick --abort
+    rb = rebase
+    rbi = rebase -i --autosquash
+    rbc = rebase --continue
+    rbs = rebase --skip
     log-summary = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
     lgs = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d' -n9
-    st = status
+    lgsu = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
     lg = log --oneline -n9
+    lgu = log --oneline
+    sb = show-branch
+    st = status
 [format]
     signoff = false
 [core]
