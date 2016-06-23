@@ -65,7 +65,7 @@ set spelllang=en_us
 " Show trailing whitepace and spaces before a tab:
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-:autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
 
 " Remember last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
