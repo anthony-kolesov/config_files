@@ -72,6 +72,9 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " Properly handle unordered lists, starting with *
 au FileType gitcommit setlocal comments-=mb:* comments+=f:*
+" GNU-like formatting for C files.
+au FileType c setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
+au FileType cpp setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
 
 " Default colorscheme is awful for diffs, because sometimes fg == bg.
 if &diff
