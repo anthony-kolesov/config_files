@@ -77,6 +77,7 @@ au FileType c setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
 au FileType cpp setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
 
 au FileType verilog setlocal expandtab ts=2 sts=2 sw=2
+au FileType expect setlocal tabstop=8 softtabstop=4 shiftwidth=4
 
 " Default colorscheme is awful for diffs, because sometimes fg == bg.
 if &diff
