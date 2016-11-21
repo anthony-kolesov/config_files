@@ -14,6 +14,7 @@
     rbi = rebase -i --autosquash
     rbc = rebase --continue
     rbs = rebase --skip
+    rba = rebase --abort
     log-summary = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
     lgs = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d' -n9
     lgsu = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
