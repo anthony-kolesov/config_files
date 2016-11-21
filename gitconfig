@@ -21,7 +21,9 @@
     lg = log --oneline -n9
     lgu = log --oneline
     sb = show-branch
-    st = status
+    st = status --short
+    sts = status --short
+    stl = status
 [format]
     signoff = false
 [core]
