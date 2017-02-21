@@ -2,7 +2,10 @@
     name = Anton Kolesov
     email = Anton.Kolesov@synopsys.com
 [alias]
+    b = branch
     br = branch
+    bv = branch -v
+    bra = branch -av
     ci = commit -s
     cia = commit --amend
     ciaa = commit --amend -a
@@ -20,6 +23,7 @@
     lgsu = log --date=short --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%C(yellow)%d'
     lg = log --oneline -n9
     lgu = log --oneline
+    mf = merge --ff-only
     sb = show-branch
     st = status --short
     sts = status --short
