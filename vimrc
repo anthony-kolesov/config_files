@@ -103,7 +103,7 @@ if getcwd()=~#'^\(/home/akolesov/ws/openocd/\)'
     set noexpandtab
 endif
 
-if getcwd()=~#'^\(/remote/ru20home1/akolesov/p4/nsim_dev\)'
+if getcwd()=~#'^\(/slowfs/ru20arcgnu1/akolesov/p4/nsim_dev\)'
     set tabstop=2
     set softtabstop=2
     set shiftwidth=2
@@ -115,5 +115,13 @@ if getcwd()=~#'^\(/home/akolesov/ws/nsim/nsim\)'
     set softtabstop=2
     set shiftwidth=2
     set expandtab
+endif
+
+if getcwd()=~#'^\(/home/akolesov/ws/gdb\)'
+    set tabstop=8
+    set softtabstop=2
+    set shiftwidth=2
+    set tw=79
+    set noexpandtab
 endif
 
