@@ -11,8 +11,9 @@ filetype plugin on
 filetype indent on
 
 " Configure tabs
-" Use 8 for real tabs, use 4 for space-tabs
-set tabstop=8
+" Use 4 for real tabs.
+set tabstop=4
+" Use 4 for space-tabs.
 set softtabstop=4
 set shiftwidth=4
 set ai
