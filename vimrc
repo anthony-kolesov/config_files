@@ -65,8 +65,17 @@ set spelllang=en_us
 
 " Show trailing whitepace and spaces before a tab:
 highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/
+" Should `autocmd Syntax` instead of simple `match` because there can be only
+" one match in the buffer.
+autocmd Syntax * syn match ExtraWhitespace /\s\+$\| \+\ze\t/ containedin=ALL
+
+" Show invalid GNU comments:
+" 1. dot must be succeeded by two whitespaces
+" 2. Comment must end with a [.?!] and two spaces.
+highlight InvalidGNUComment ctermbg=red guibg=red
+" `autocmd Syntax` tends to break comment highlightinh, so use only `match`.
+au FileType c match InvalidGNUComment /[^.\?! ] \{1,2\}\*\/\|\S\*\/\|\. [^ ]/
+au FileType cpp match InvalidGNUComment /[^.\?! ] \{1,2\}\*\/\|\S\*\/\|\. [^ ]/
 
 " Remember last position
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
