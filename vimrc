@@ -83,18 +83,23 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 " Properly handle unordered lists, starting with *
 au FileType gitcommit setlocal comments-=mb:* comments+=f:*
 " GNU-like formatting for C files.
-au FileType c setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
-au FileType cpp setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
+"au FileType c setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
+"au FileType cpp setlocal cinoptions=>4,n-2,{2,^-2,:2,=2,g0,h2,p5,t0,+2,(0,u0,w1,m1
 
 au FileType verilog setlocal expandtab ts=2 sts=2 sw=2
 au FileType expect setlocal tabstop=8 softtabstop=4 shiftwidth=4
 au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-au FileType rst setlocal tw=80
+au FileType rst setlocal tw=80 ts=3 sts=3 sw=3 expandtab
 
 " Default colorscheme is awful for diffs, because sometimes fg == bg.
 if &diff
-    colorscheme desert
+    colorscheme pablo
 endif
+
+" Custom command that will set special background color for columns after 74
+" and 80.  GDB standard is soft limit of 74 column, hard limit of 80.
+command ColumnWarn
+      \ let &colorcolumn="74,".join(range(81,999),",") | hi ColorColumn ctermbg=0
 
 if getcwd()=~#'^\(/home/akolesov/ws/openocd/\)'
     set tabstop=4
