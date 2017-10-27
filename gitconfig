@@ -39,3 +39,6 @@
     confirm = auto
 [push]
     default = simple
+[notes "rewrite"]
+	amend = true
+	rebase = true
