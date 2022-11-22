@@ -1,12 +1,12 @@
 [user]
     name = Anton Kolesov
-    email = Anton.Kolesov@synopsys.com
+    email = anthony.kolesov@gmail.com
 [alias]
     b = branch
     br = branch
     bv = branch -v
     bra = branch -av
-    ci = commit -s
+    ci = commit
     cia = commit --amend
     ciaa = commit --amend -a
     co = checkout
